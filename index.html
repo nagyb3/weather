@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        html body {
+            background-color: #e7eecf !important;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center mt-5">Welcome To My weather APp!</h1>
+    <p class="text-center mt-3">Sunny or rainy in your city?</p>
+
+    <div class="main mt-5 text-center">
+        <form id="my-form">
+            <label for="input-city">City:</label>
+            <input type="text" name="input-city" id="input-city">
+            <button class="btn btn-dark" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col bg-white border-dark border p-3">
+                <h2 class="m-0" id="city">placeholder</h2>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="left col-sm p-3 border border-dark bg-white">
+                <p>current weather</p>
+                <p>Temperature: <span id="temp">Placeholder</span>˚C</p>
+                <p>Condition: <span id="cond">Placeholder</span></p>
+<!--                <img id="current-weather-icon" src="" alt="">-->
+            </div>
+            <div class="right col-sm p-3 border border-dark bg-white">
+                <p>forecast</p>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
