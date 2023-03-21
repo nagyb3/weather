@@ -10,6 +10,15 @@
         html body {
             background-color: #e7eecf !important;
         }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -17,7 +26,7 @@
     <p class="text-center mt-3">Sunny or rainy in your city?</p>
 
     <div class="main mt-5 text-center">
-        <form id="my-form">
+        <form id="my-form" autocomplete="off">
             <label for="input-city">City:</label>
             <input type="text" name="input-city" id="input-city">
             <button class="btn btn-dark" type="submit">Submit</button>
@@ -26,21 +35,34 @@
     <div class="container mt-5">
         <div class="row text-center">
             <div class="col bg-white border-dark border p-3">
-                <h2 class="m-0" id="city">placeholder</h2>
+                <h2 class="m-0 text-capitalize fw-bold" id="city">placeholder</h2>
             </div>
         </div>
         <div class="row text-center">
-            <div class="left col-sm p-3 border border-dark bg-white">
-                <p>current weather</p>
+            <div class="left col-sm p-3 border border-dark bg-white d-flex flex-column justify-content-center align-items-center">
+                <p class="fw-bold">Current weather</p>
+                <img style="height: 64px; width: 64px;" id="current-weather-icon" src="" alt="">
                 <p>Temperature: <span id="temp">Placeholder</span>˚C</p>
                 <p>Condition: <span id="cond">Placeholder</span></p>
-<!--                <img id="current-weather-icon" src="" alt="">-->
+                <p>Humidity: <span id="humidity">placeh</span>%</p>
             </div>
             <div class="right col-sm p-3 border border-dark bg-white">
-                <p>forecast</p>
+                <p class="fw-bold">Forecast</p>
+                <div class="firstday">
+                    <p class="mt-5" id="first-day-date"></p>
+                    <p>Max temp: <span id="first-max"></span>°C, Min temp: <span id="first-min"></span>°C</p>
+                    <p class="mt-5" id="second-day-date"></p>
+                    <p>Max temp: <span id="second-max"></span>°C, Min temp: <span id="second-min"></span>°C</p>
+                    <p class="mt-5" id="third-day-date"></p>
+                    <p>Max temp: <span id="third-max"></span>°C, Min temp: <span id="third-min"></span>°C</p>
+                </div>
             </div>
         </div>
     </div>
+    <footer class="bg-white border border-dark d-flex justify-content-around">
+        <p class="text-dark m-0 p-3">Made By <a target="_blank" href="https://github.com/nagyb3">Bence Nagy</a></p>
+        <p class="text-dark m-0 p-3">API used: <a href="https://www.weatherapi.com/">Weather API</a></p>
+    </footer>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="main.js"></script>
 </body>
